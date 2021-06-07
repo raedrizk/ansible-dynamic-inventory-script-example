@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html#developing-inventory-scripts
-from __future__ import (absolute_import, division, print_function, unicode_literals)
+#from __future__ import (absolute_import, division, print_function, unicode_literals)
 import mysql.connector # pip3 install mysql-connector in virtual environment
 import json
 import sys
