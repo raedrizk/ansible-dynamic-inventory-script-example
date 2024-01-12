@@ -1,4 +1,5 @@
 from ansible.plugins.inventory import BaseInventoryPlugin
+import os
 
 ANSIBLE_METADATA = {
     'metadata_version': '',
@@ -47,10 +48,10 @@ class InventoryModule(BaseInventoryPlugin):
             "_meta": {
                 "hostvars": {
                     "web1.example.com": {
-                        "ansible_user": "rdiscala"
+                        "ansible_user": "rsoliman"
                     },
                     "web2.example.com": {
-                        "ansible_user": "rdiscala"
+                        "ansible_user": "rsoliman"
                     }
                 }
             }
@@ -68,6 +69,9 @@ class InventoryModule(BaseInventoryPlugin):
         super(InventoryModule, self).parse(inventory, loader, path, cache)
         raw_data = self._get_raw_host_data()
         _meta = raw_data.pop('_meta')
+        print("TESTING ENV VAR")
+        print(os.environ['name'])
+
         for group_name, group_data in raw_data.items():
             for host_name in group_data['hosts']:
                 self.inventory.add_host(host_name)
