@@ -42,7 +42,7 @@ class InventoryModule(BaseInventoryPlugin):
         """
         return {
             "all": {
-                "hosts": ["web1.example.com", "web2.example.com"]
+                "hosts": ["web1.example.com", "web2.example.com", "web3.example.com"]
             },
             "_meta": {
                 "hostvars": {
