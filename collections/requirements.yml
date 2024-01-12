@@ -1,0 +1,5 @@
+---
+collections:
+  - name: https://github.com/raedrizk/ansible-dynamic-inventory-script-example.git#/collections/ansible_collections/rsoliman/invplugins/
+    type: git
+  
